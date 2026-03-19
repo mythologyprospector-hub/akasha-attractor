@@ -18,6 +18,7 @@ function:
     - instability
     - equilibrium
   outputs: []
+  terminal: true
   behaviors:
     - convergence
     - recurrence

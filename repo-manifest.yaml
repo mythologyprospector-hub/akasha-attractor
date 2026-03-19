@@ -1,0 +1,40 @@
+name: akasha-attractor
+
+identity:
+  role: terminal_module
+  domain: phase_systems
+  target_node: attractor
+
+origin:
+  source: akasha-discovery
+  trigger: intentional_terminal
+  created_from_gap: true
+
+function:
+  purpose: explore_convergence_and_terminal_dynamics
+  inputs:
+    - phase
+    - transition
+    - instability
+    - equilibrium
+  outputs: []
+  behaviors:
+    - convergence
+    - recurrence
+    - stabilization
+    - terminal_settling
+
+status:
+  maturity: experimental
+  confidence: low
+  active: true
+
+relationships:
+  upstream:
+    - akasha-discovery
+    - akasha-graph-phases
+  downstream: []
+  related:
+    - akasha-world
+    - akasha-instability
+    - akasha-equilibrium

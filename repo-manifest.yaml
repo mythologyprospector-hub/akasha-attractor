@@ -37,4 +37,6 @@ relationships:
 type: module
 role: concept
 domain: systems
-depends_on: []
+depends_on:
+- akasha-world
+- akasha-constellation

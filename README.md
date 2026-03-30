@@ -1,70 +1,66 @@
-# Akasha Attractor
+# akasha-attractor
 
-Exploration of attractors as terminal convergence states within the Akasha ecosystem.
+Akasha Attractor is the first **pattern and clustering engine** in the Akasha ecosystem.
 
-This repository exists to study how systems settle, converge, or terminate under sustained dynamics. In the phase graph, `attractor` is treated as an intentional terminal rather than a structural defect.
+It reads the persistent event ledger from `akasha-events` and surfaces simple, disciplined patterns.
 
----
+## Position in the Akasha stack
 
-## Purpose
+```text
+akasha-anomaly
+    ↓
+akasha-time-nexus
+    ↓
+akasha-events
+    ↓
+akasha-attractor
+```
 
-Akasha Attractor explores:
+## V2 goal
 
-• how systems converge toward stable or recurring end states  
-• how attractors differ from equilibrium  
-• how long-term tendencies shape system evolution  
-• how terminal states can be recognized without being mistaken for broken structure  
+V2 is intentionally modest.
 
----
+It does not attempt to explain reality. It does not infer causes.
+It performs first-order pattern work:
 
-## Origin
+- count events by category
+- count events by source
+- count events by day
+- count events by hour
+- count events by season (when present in payload context)
+- detect simple burst windows
 
-Generated in response to Akasha Discovery identifying `attractor` as a terminal node that is valid by design.
+## Why it exists
 
-Unlike structural sinks, attractors are not necessarily incomplete. They may represent the destination toward which a system tends to evolve.
+Akasha needs a first discovery loop that is real, honest, and useful.
 
----
+Attractor begins that loop by answering questions like:
 
-## Role in the Akasha Ecosystem
+- what categories are most common?
+- which sources dominate?
+- when do events cluster?
+- are there bursts of activity in short time windows?
 
-akasha-axioms → governing principles  
-akasha-world → knowledge context  
-akasha-discovery → detects graph pressure and endpoints  
-akasha-forge → materializes exploratory modules  
-akasha-attractor → investigates convergence and terminal dynamics  
+## Discipline
 
----
+Attractor is not an oracle.
 
-## Exploration Directions
+Its job is:
 
-This repository may examine attractors across domains such as:
+- read
+- count
+- group
+- compare
+- surface
 
-• dynamical systems  
-• chaos and strange attractors  
-• optimization and loss landscapes  
-• ecosystems and evolutionary stable states  
-• cognition, habit loops, and social convergence  
+Interpretation belongs later, after signal is real.
 
----
+## Example usage
 
-## Philosophy
+```bash
+python -m akasha_attractor.cli.main summary --db events.db
+```
 
-Not every endpoint is a failure.
-
-Some states are not broken because they stop.
-They stop because they are where the system was heading all along.
-
-An attractor is not merely where motion ends.
-It is where repeated motion reveals its hidden preference.
-
----
-
-## Status
-
-Experimental.
-
-This repository exists as an exploratory module and may evolve as Akasha develops stronger models of convergence, recurrence, and terminal behavior.
-
----
-
-This repository participates in the Akasha ecosystem and is described by repo-manifest.yaml.
+```bash
+python -m akasha_attractor.cli.main bursts --db events.db --window-hours 6 --threshold 3
+```

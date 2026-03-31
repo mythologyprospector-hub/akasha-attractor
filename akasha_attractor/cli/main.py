@@ -33,3 +33,7 @@ def main() -> None:
             burst_report(args.db, window_hours=args.window_hours, threshold=args.threshold),
             indent=2
         ))
+
+
+if __name__ == "__main__":
+    main()

@@ -64,3 +64,35 @@ python -m akasha_attractor.cli.main summary --db events.db
 ```bash
 python -m akasha_attractor.cli.main bursts --db events.db --window-hours 6 --threshold 3
 ```
+
+## Engine Role
+
+TODO: fill this section.
+
+## Inputs
+
+TODO: fill this section.
+
+## Memory / Registry
+
+TODO: fill this section.
+
+## Relation Model
+
+TODO: fill this section.
+
+## Evaluator
+
+TODO: fill this section.
+
+## Outputs
+
+TODO: fill this section.
+
+## Position in Constellation
+
+TODO: fill this section.
+
+## Next Steps
+
+TODO: fill this section.

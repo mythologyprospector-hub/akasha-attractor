@@ -36,3 +36,8 @@ alignment:
 
 depends_on:
   - akasha-events
+
+engine:
+  family: pattern
+  class: evaluation_engine
+  role: unknown

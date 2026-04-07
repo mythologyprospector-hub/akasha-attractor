@@ -41,3 +41,11 @@ alignment:
 
 depends_on:
   - akasha-events
+
+# ---- Canonical sections added by akasha-canon ----
+type: organ
+
+family: discovery
+
+role: attractor
+
